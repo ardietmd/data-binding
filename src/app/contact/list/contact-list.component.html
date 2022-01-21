@@ -1,0 +1,45 @@
+<div class="list-contact">
+  <div class="contact" *ngFor="let c of contacts">
+
+    <div class="contact-id"(click) ="onSelect(c)">{{c.id}}</div>
+
+    <div class="contact-name"(click) ="onSelect(c)">{{c.name}}</div>
+  </div>
+</div>
+
+<style>
+  .contact {
+  display: flex;
+  width: 425px;
+  height: 40px;
+  margin-top: 10px;
+  border: solid 1px rgb(95, 95, 243);
+  border-radius: 10px;
+  align-items: center;
+  overflow: hidden;
+}
+
+.contact-id {
+  width: 50px;
+  line-height: 40px;
+  background: rgb(95, 95, 243);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.contact-name {
+  margin-right: 50px;
+  color: rgb(95, 95, 243);
+  font-weight: 700;
+  justify-content: center;
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: 20px;
+
+}
+
+</style>

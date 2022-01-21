@@ -1,0 +1,11 @@
+    <div class="container">
+      <h1>Aplikasi Kontak - Data Binding</h1>
+      <div>
+        <button type="button" [class.active]="display=='dashboard'" (click) ="onMenuClick('dashboard')">Dashboard</button>
+        <button type="button"  [class.active]="display=='list'"(click) ="onMenuClick('list')">Daftar Kontak</button>
+      </div>
+
+
+      <dashboard *ngIf="display=='dashboard'" [contacts]="contacts" (select) ="onSelect($event)"></dashboard>
+      <contact-list *ngIf="display=='list'" [contacts]="contacts" (select) = "onSelect($event)"></contact-list>
+      <contact-detail *ngIf="display=='detail'" [contact]="contact" (onSave) ="onSave($event)" (onCancel) = "onCancel()"></contact-detail>

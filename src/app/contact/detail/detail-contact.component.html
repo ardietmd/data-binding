@@ -1,0 +1,25 @@
+<h2>Kontak Detail</h2>
+<div>
+  <label>ID</label>
+  <div class="form-control">{{contact.id}}</div>
+</div>
+<div>
+  <label>Nama</label>
+  <input type="text" name="nama" class="form-control" [(ngModel)]="contact.name">
+</div>
+<div>
+  <label>Email</label>
+  <input type="text" name="email" class="form-control" [(ngModel)]="contact.email">
+</div>
+<div>
+  <label>Telepon</label>
+  <input type="text" name="phone" class="form-control" [(ngModel)]="contact.phone">
+</div>
+<div>
+  <button type="button" class="btn-save" (click) ="onSaveContact()">SIMPAN</button>
+  <button type="button" class="btn-cancel" (click) ="onCancelSave()">BATAL</button>
+</div>
+<div class="json">
+    {{contact | json}}
+</div>
+

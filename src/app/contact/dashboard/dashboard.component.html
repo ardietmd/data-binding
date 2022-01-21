@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="list-container">
+    <div *ngFor="let c of contacts" class="contact" (click) ="onSelect(c)">{{c.name}}</div>
+    <div></div>
+  </div>
+</div>
+
+<style>
+  .list-container {
+  display: flex;
+  margin-top: 20px;
+}
+
+.contact {
+  display: flex;
+  width: 100px;
+  height: 100px;
+  background: rgb(127, 127, 236);
+  border-radius: 10px;
+  color: white;
+  font-weight: 700;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  cursor: pointer;
+  text-align: center;
+}
+</style>
